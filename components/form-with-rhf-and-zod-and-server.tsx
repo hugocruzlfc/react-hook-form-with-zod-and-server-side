@@ -1,6 +1,6 @@
 "use client";
 
-import { TSignUpSchema, signUpSchema } from "@/lib/types";
+import { TSignUpSchema, signUpSchema } from "@/lib/formValidations";
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -58,7 +58,10 @@ export default function FormWithReactHookFormAndZodAndServer() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-2">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-y-2"
+    >
       <input
         {...register("email")}
         type="email"

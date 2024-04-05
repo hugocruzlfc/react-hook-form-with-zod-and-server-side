@@ -1,4 +1,4 @@
-import { signUpSchema } from "@/lib/types";
+import { signUpSchema } from "@/lib/formValidations";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
